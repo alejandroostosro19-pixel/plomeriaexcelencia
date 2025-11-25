@@ -7,12 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a2e;
-            --secondary: #f39c12;
-            --accent: #e74c3c;
-            --light: #f8f9fa;
+            --primary: #1e272e;
+            --secondary: #c0392b;
+            --accent: #34495e;
+            --light: #ecf0f1;
             --text: #2c3e50;
-            --blue: #3498db;
+            --metallic: #95a5a6;
+            --dark-red: #922b21;
         }
         
         * {
@@ -33,12 +34,13 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(26, 26, 46, 0.95);
+            background: rgba(30, 39, 46, 0.98);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             animation: slideDown 0.6s ease-out;
+            border-bottom: 3px solid var(--secondary);
         }
         
         @keyframes slideDown {
@@ -104,7 +106,7 @@
         .hero {
             margin-top: 80px;
             height: 90vh;
-            background: linear-gradient(135deg, var(--primary) 0%, #16213e 100%);
+            background: linear-gradient(135deg, #1e272e 0%, #34495e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -124,8 +126,8 @@
                     90deg,
                     transparent,
                     transparent 50px,
-                    rgba(243, 156, 18, 0.03) 50px,
-                    rgba(243, 156, 18, 0.03) 51px
+                    rgba(192, 57, 43, 0.05) 50px,
+                    rgba(192, 57, 43, 0.05) 51px
                 );
             animation: slideLines 20s linear infinite;
         }
@@ -158,7 +160,7 @@
             color: white;
             letter-spacing: 8px;
             margin-bottom: 1rem;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
         }
         
         .hero h1 span {
@@ -166,16 +168,7 @@
             display: block;
             font-size: 8rem;
             line-height: 0.9;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 20px var(--secondary), 0 0 30px var(--secondary);
-            }
-            to {
-                text-shadow: 0 0 30px var(--secondary), 0 0 40px var(--secondary);
-            }
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         
         .hero p {
@@ -190,20 +183,21 @@
             display: inline-block;
             padding: 1.2rem 3rem;
             background: var(--secondary);
-            color: var(--primary);
+            color: white;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.1rem;
-            border-radius: 50px;
+            border-radius: 5px;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.3);
+            box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
             letter-spacing: 1px;
+            border: 2px solid var(--dark-red);
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(243, 156, 18, 0.5);
-            background: #f1c40f;
+            box-shadow: 0 12px 35px rgba(192, 57, 43, 0.6);
+            background: var(--dark-red);
         }
         
         /* Services Section */
@@ -267,7 +261,7 @@
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(90deg, var(--blue), var(--secondary), var(--accent));
+            background: linear-gradient(90deg, var(--secondary), var(--accent), var(--metallic));
             transform: scaleX(0);
             transition: transform 0.4s ease;
         }
@@ -320,7 +314,7 @@
         
         /* About Section */
         .about {
-            background: var(--primary);
+            background: var(--accent);
             color: white;
             padding: 6rem 2rem;
             position: relative;
@@ -335,8 +329,8 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 50%, rgba(243, 156, 18, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(192, 57, 43, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(149, 165, 166, 0.1) 0%, transparent 50%);
         }
         
         .about-content {
@@ -407,11 +401,12 @@
         
         /* Footer */
         footer {
-            background: var(--primary);
+            background: var(--accent);
             color: white;
             text-align: center;
             padding: 2rem;
             font-size: 0.95rem;
+            border-top: 3px solid var(--secondary);
         }
         
         footer p {
@@ -457,7 +452,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>
-                SERVICIOS DE
+                SERVICIOS DE PLOMERÍA
                 <span>EXCELENCIA</span>
             </h1>
             <p>¡No dudes en llamar! Servicios las 24 hrs. los 365 días del año</p>
